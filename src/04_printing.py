@@ -14,4 +14,6 @@ z = "I like turtles!"
 
 # Use the 'format' string method to print the same thing
 
+
 # Finally, print the same thing using an f-string
+print(f"x is equal to {x}, y is equal to {round(y, 2)} and z is '{z}'")
