@@ -40,9 +40,16 @@ print(y)
 x = input("Enter comma-separated numbers: ").split(',')
 
 # What do you need between the square brackets to make it work?
-# y = []
-# for z in x:
-#     if (z % 2) == 0:
-#         y.append(z)
 
-# print(y)
+y = []
+for z in x:
+    if int(z) % 2 == 0:
+        y.append(z)
+
+print(y)
+
+# OR
+
+y = [z for z in x if int(z) % 2 == 0]
+
+print(y)
