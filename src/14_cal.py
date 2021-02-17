@@ -30,3 +30,22 @@ it should use today’s date to get the month and year.
 import sys
 import calendar
 from datetime import datetime
+
+cal = calendar.TextCalendar(calendar.SUNDAY)
+now = datetime.now()
+
+year_month = input("month/year i.e 00/0000 format: ")
+
+try:
+  if (len(year_month) == 0):
+    str = cal.formatmonth(now.year, now.month)
+    print(str)
+  elif '/' in year_month:
+    new_date = year_month.split('/')
+    str = cal.formatmonth(int(new_date[1]), int(new_date[0]))
+    print(str)
+  elif '/' not in year_month:
+    str = cal.formatmonth(now.year, int(year_month))
+    print(str)
+except:
+  print('wrong format, please use:- month/year i.e 00/0000 ')
